@@ -2,11 +2,11 @@
 ---
 {% include fragment-pagebegin.html %}
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">公開ボックスはここにあります</p><!--EndReleaseHeader-->
   <a name="root"> </a>
   <h2 id="root">{{site.data.pages[page.path].title}}</h2>
   <p>
-    <a href="{{[type]}}-{{[id]}}.html">(back to description)</a>
+    <a href="{{[type]}}-{{[id]}}.html">(説明に戻る)</a>
   </p>
   <p>
     <a href="{{[type]}}-{{[id]}}.{{[fmt]}}">Raw {{[fmt]}}</a>
@@ -19,7 +19,7 @@
   {% endif %}
   
   <p>
-    <b>Source view</b>
+    <b>ソース表示</b>
   </p>
   
   {% include {{[type]}}-{{[name]}}.xhtml %}

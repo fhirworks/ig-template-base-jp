@@ -6,7 +6,7 @@
 {% assign excludettl = site.data.info.excludettl | downcase | slice: 0 %}
 {% assign excludemaps = site.data.info.excludemap | downcase | slice: 0 %}
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">公開ボックスはここにあります</p><!--EndReleaseHeader-->
   <ul class="nav nav-tabs">
     <li class="active">
       <a href="#">Content</a>
@@ -16,7 +16,7 @@
     </li>
 {% unless excludemaps == 'y' %}
     <li>
-      <a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a>
+      <a href="{{[type]}}-{{[id]}}-mappings.html">マッピング</a>
     </li>
 {% endunless %}
 {% unless excludexml == 'y' %}
@@ -45,8 +45,8 @@
   <p>Status: <b>{{site.data.structuredefinitions['{{[id]}}'].status}}</b><br/>
     Extension maintained by: {{site.data.structuredefinitions['{{[id]}}'].publisher}}</p>
 
-  <p><b>Context of Use</b></p>
-  <p>This extension may be used on the following {{site.data.structuredefinitions['{{[id]}}'].contextType}} element(s):</p>
+  <p><b>使用状況</b></p>
+  <p>この拡張機能は次の要素で使用できます: {{site.data.structuredefinitions['{{[id]}}'].contextType}}</p>
   <ul>
     {% for context in site.data.structuredefinitions['{{[id]}}'].contexts %}
     <li>{{context}}</li>
@@ -60,14 +60,14 @@
   </div>
   {% endif %}
 
-  <p><b>Usage info</b></p>
+  <p><b>使用情報</b></p>
   {%include StructureDefinition-{{[id]}}-sd-xref.xhtml%}
   
   <!-- no uri -->
   <a name="profile"> </a>
-  <h3 id="profile">Formal Views of Extension Content</h3>
+  <h3 id="profile">拡張コンテンツの正式なビュー</h3>
   <p>
-    <a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work</a>.
+    <a href="{{site.data.fhir.path}}profiling.html#representation">プロファイル、差分、スナップショットの説明、およびXMLプレゼンテーションとJSONプレゼンテーションのしくみ</a>.
   </p>
   <div id="tabs">
     <ul>
@@ -102,7 +102,7 @@
     <a name="tabs-summ"> </a>
     <div id="tabs-summ">
       <div id="tbl-summ">
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="tbl-summ-inner">
           <a name="summary"> </a>
@@ -113,7 +113,7 @@
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="tbl-diff-inner">
           {%include StructureDefinition-{{[id]}}-diff.xhtml%}
@@ -161,7 +161,7 @@
     <a name="tabs-all"> </a>
     <div id="tabs-all">
       <div id="all-summ">
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="all-summ-inner">
           {%include StructureDefinition-{{[id]}}-summary.xhtml%}
@@ -171,7 +171,7 @@
         <p>
           <b>Differential View</b>
         </p>
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="all-tbl-diff-inner">
           {%include StructureDefinition-{{[id]}}-diff.xhtml%}
@@ -218,14 +218,14 @@
     </div>
   </div>
   <p>&#160;</p>
-  <p>Other representations of extension: <a href="{{[type]}}-{{[id]}}.sch">Schematron</a>
+  <p>拡張のその他の表現: <a href="{{[type]}}-{{[id]}}.sch">Schematron</a>
   </p>
   <a name="tx"> </a>
-  <h3 id="tx">Terminology Bindings</h3>
+  <h3 id="tx">用語のバインド</h3>
   {%include StructureDefinition-{{[id]}}-tx.xhtml%}
   
   <a name="inv"> </a>
-  <h3 id="inv">Constraints</h3>
+  <h3 id="inv">制約</h3>
   {%include StructureDefinition-{{[id]}}-inv.xhtml%}
 
   {% assign notes = site.data.pages[page.path].notes %}

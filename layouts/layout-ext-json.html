@@ -5,17 +5,17 @@
 {% assign excludettl = site.data.info.excludettl | downcase | slice: 0 %}
 {% assign excludemaps = site.data.info.excludemap | downcase | slice: 0 %}
 <div style="counter-reset: section 7" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">公開ボックスはここにあります</p><!--EndReleaseHeader-->
   <ul class="nav nav-tabs">
     <li>
       <a href="{{[type]}}-{{[id]}}.html">Content</a>
     </li>
     <li>
-      <a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a>
+      <a href="{{[type]}}-{{[id]}}-definitions.html">詳細な説明</a>
     </li>
 {% unless excludemaps == 'y' %}
     <li>
-      <a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a>
+      <a href="{{[type]}}-{{[id]}}-mappings.html">マッピング</a>
     </li>
 {% endunless %}
 {% unless excludexml == 'y' %}
@@ -33,8 +33,8 @@
 {% endunless %}
   </ul>
   <a name="root"> </a>
-  <h2 id="root">Extension: {{[title]}} - JSON Profile</h2>
-  <p>JSON representation of the {{[id]}} Extension</p>
+  <h2 id="root">拡張: {{[title]}} - JSONプロファイル</h2>
+  <p>{{[id]}} 拡張機能のJSON表現</p>
   {% assign intro = site.data.pages[page.path].intro %}
   {% if site.data.pages[page.path].intro != null %}
   <div style="display:inline-block">

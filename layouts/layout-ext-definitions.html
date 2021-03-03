@@ -6,17 +6,17 @@
 {% assign excludettl = site.data.info.excludettl | downcase | slice: 0 %}
 {% assign excludemaps = site.data.info.excludemap | downcase | slice: 0 %}
 <div style="counter-reset: section 4" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">公開ボックスはここにあります</p><!--EndReleaseHeader-->
   <ul class="nav nav-tabs">
     <li>
-      <a href="{{[type]}}-{{[id]}}.html">Content</a>
+      <a href="{{[type]}}-{{[id]}}.html">コンテント</a>
     </li>
     <li class="active">
-      <a href="#">Detailed Descriptions</a>
+      <a href="#">詳細な説明</a>
     </li>
 {% unless excludemaps == 'y' %}
     <li>
-      <a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a>
+      <a href="{{[type]}}-{{[id]}}-mappings.html">マッピング</a>
     </li>
 {% endunless %}
 {% unless excludexml == 'y' %}
@@ -36,7 +36,7 @@
 {% endunless %}
   </ul>
   <a name="root"> </a>
-  <h2 id="root">Extension: {{[title]}} - Detailed Descriptions</h2>
+  <h2 id="root">拡張: {{[title]}} - 詳細な説明</h2>
   <p>Definitions for the {{[id]}} Extension</p>
 
   {% assign intro = site.data.pages[page.path].intro %}

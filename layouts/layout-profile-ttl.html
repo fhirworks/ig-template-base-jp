@@ -5,21 +5,21 @@
 {% assign excludejson = site.data.info.excludejson | downcase | slice: 0 %}
 {% assign excludemaps = site.data.info.excludemap | downcase | slice: 0 %}
 <div style="counter-reset: section 9" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">公開ボックスはここにあります</p><!--EndReleaseHeader-->
   <ul class="nav nav-tabs">
     <li>
-      <a href="{{[type]}}-{{[id]}}.html">Content</a>
+      <a href="{{[type]}}-{{[id]}}.html">コンテント</a>
     </li>
     <li>
-      <a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a>
+      <a href="{{[type]}}-{{[id]}}-definitions.html">詳細な説明</a>
     </li>
 {% unless excludemaps == 'y' %}
     <li>
-      <a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a>
+      <a href="{{[type]}}-{{[id]}}-mappings.html">マッピング</a>
     </li>
 {% endunless %}
     <li>
-      <a href="{{[type]}}-{{[id]}}-examples.html">Examples</a>
+      <a href="{{[type]}}-{{[id]}}-examples.html">サンプル</a>
     </li>
 {% unless excludexml == 'y' %}
     <li>
@@ -36,8 +36,8 @@
     </li>
   </ul>
   <a name="root"> </a>
-  <h2 id="root">StructureDefinition: {{[title]}} - Turtle Profile</h2>
-  <p>Turtle representation of the {{[id]}} Profile.</p>
+  <h2 id="root">構造定義: {{[title]}} - Turtleプロファイル</h2>
+  <p>{{[id]}} プロファイルのTurtle表現</p>
   {% assign intro = site.data.pages[page.path].intro %}
   {% if site.data.pages[page.path].intro != null %}
   <div style="display:inline-block">

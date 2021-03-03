@@ -6,21 +6,21 @@
 {% assign excludettl = site.data.info.excludettl | downcase | slice: 0 %}
 {% assign excludemaps = site.data.info.excludemap | downcase | slice: 0 %}
 <div style="counter-reset: section 6" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">公開ボックスはここにあります</p><!--EndReleaseHeader-->
   <ul class="nav nav-tabs">
     <li>
-      <a href="{{[type]}}-{{[id]}}.html">Content</a>
+      <a href="{{[type]}}-{{[id]}}.html">コンテント</a>
     </li>
     <li>
-      <a href="{{[type]}}-{{[id]}}-definitions.html">Detailed Descriptions</a>
+      <a href="{{[type]}}-{{[id]}}-definitions.html">詳細な説明</a>
     </li>
 {% unless excludemaps == 'y' %}
     <li>
-      <a href="{{[type]}}-{{[id]}}-mappings.html">Mappings</a>
+      <a href="{{[type]}}-{{[id]}}-mappings.html">マッピング</a>
     </li>
 {% endunless %}
     <li class="active">
-      <a href="#">Examples</a>
+      <a href="#">サンプル</a>
     </li>
 {% unless excludexml == 'y' %}
     <li>
@@ -39,7 +39,7 @@
 {% endunless %}
   </ul>
   <a name="root"> </a>
-  <h2 id="root">StructureDefinition: {{[title]}} - Examples</h4>
+  <h2 id="root">構造定義: {{[title]}} - サンプル</h4>
   {% assign intro = site.data.pages[page.path].intro %}
   {% if site.data.pages[page.path].intro != null %}
   <div style="display:inline-block">
@@ -62,7 +62,7 @@
     </tbody>
   </table>
 {% else %}
-  <p><b>No examples are currently available for the {{id}} Profile.</b></p>
+  <p><b>現在 {{id}} プロファイルのサンプルはありません。</b></p>
 {% endif %}
 
   {% assign notes = site.data.pages[page.path].notes %}
