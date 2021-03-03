@@ -20,7 +20,7 @@
             <td>
               <img src="work-98936_640.png" alt="Work in Progress icon" height="30" width="30"/>
             </td>
-            <td>The content in this section has not undergone work group review and may be significantly revised prior to the next ballot.</td>
+            <td>このセクションの内容は、ワークグループによるレビューを受けておらず、次の投票の前に大幅に改訂される可能性があります。</td>
           </tr>
         </tbody>
       </table>
