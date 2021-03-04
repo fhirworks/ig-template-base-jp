@@ -2,7 +2,7 @@
 ---
 {% include fragment-pagebegin.html %}
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">公開ボックスはここにあります</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">このページは作成中の内容です。</p><!--EndReleaseHeader-->
   <a name="root"> </a>
   <h2 id="root">{{site.data.pages[page.path].title}}</h2>
   <p>
@@ -39,28 +39,28 @@
   </p>
   <table class="grid">
     <tr>
-      <td>レベル</td>
+      <td>Level</td>
       <td>FHIRが定義するいくつかのコードリストは階層的です-各コードにはレベルが割り当てられます。
           このスキームでは、一部のコードが他のコードの下にあり、それらが下にあるコードも適用されることを意味します。</td>
     </tr>
     <tr>
-      <td>ソース</td>
+      <td>Source</td>
       <td>コードの定義のソース（値セットが他の場所で定義されたコードを描画する場合）</td>
     </tr>
     <tr>
-      <td>コード</td>
+      <td>Code</td>
       <td>コード（リソースインスタンスのコードとして使用）</td>
     </tr>
     <tr>
-      <td>表示</td>
+      <td>Display</td>
       <td>ディスプレイ（<a href="{{site.data.fhir.path}}datatypes.html#Coding">Coding</a>)の<i>display</i>要素で使用されます。ディスプレイがない場合、実装者は単にコードを表示するのではなく、概念をアプリケーションにマッピングする必要があります。</td>
     </tr>
     <tr>
-      <td>定義</td>
+      <td>Definition</td>
       <td>コンセプトの意味の説明</td>
     </tr>
     <tr>
-      <td>コメント</td>
+      <td>Comments</td>
       <td>コードの使用方法に関する追加の注意事項</td>
     </tr>
   </table>
