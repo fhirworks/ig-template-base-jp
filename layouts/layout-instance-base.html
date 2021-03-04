@@ -2,7 +2,7 @@
 ---
 {% include fragment-pagebegin.html %}
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">このページは作成中の内容です。</p><!--EndReleaseHeader-->
 
   {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='content' %}
 
@@ -16,7 +16,7 @@
 {% unless example %}
   {% if '{{[type]}}' == 'CapabilityStatement' %}
       <p>
-      <a href="{{[id]}}.openapi.json" no-download="true">Raw OpenAPI-Swagger Definition file</a> | <a href="{{[id]}}.openapi.json" download>Download</a>
+      <a href="{{[id]}}.openapi.json" no-download="true">Raw OpenAPI-Swagger 定義ファイル</a> | <a href="{{[id]}}.openapi.json" download>ダウンロード</a>
       </p>
   {% endif %}
 {% endunless %}

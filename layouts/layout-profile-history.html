@@ -6,12 +6,12 @@
 {% include fragment-pagebegin.html %}
 
 <div style="counter-reset: section 10" class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">このページは作成中の内容です。</p><!--EndReleaseHeader-->
   {% include fragment-profile-navtabs.html type='{{[type]}}' id='{{[id]}}' active='history' %}
 
   <a name="root"> </a>
-  <h2 id="root">{{modelType}}: {{[title]}} - Change History</h2>
-  <p>Changes in the {{[id]}} {{modelType | downcase}}.</p>
+  <h2 id="root">{{modelType}}: {{[title]}} - 変更履歴</h2>
+  <p>{{[id]}} {{modelType | downcase}} 変更履歴</p>
 
   {%include {{[type]}}-{{[id]}}-history.xhtml%}
 

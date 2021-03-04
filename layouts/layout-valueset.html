@@ -2,17 +2,17 @@
 ---
 {% include fragment-pagebegin.html %}
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">このページは作成中の内容です。</p><!--EndReleaseHeader-->
   {% include fragment-base-navtabs.html type='{{[type]}}' id='{{[id]}}' active='content' %}
   <a name="root"> </a>
   <h2 id="root">ValueSet: {{site.data.pages[page.path].title}}</h2>
   <p>
-    <b>Summary</b>
+    <b>概要</b>
   </p>
   {%include {{[type]}}-{{[id]}}-summary.xhtml%}
 
   <p>
-    <b>References</b>
+    <b>参照</b>
   </p>
   {%include {{[type]}}-{{[id]}}-xref.xhtml%}
 
@@ -26,39 +26,38 @@
 
   <p>&#160;</p>
   <a name="expansion"> </a>
-  <h3 id="expansion">Expansion</h3>
+  <h3 id="expansion">拡張</h3>
 
   {%include {{[type]}}-{{[id]}}-expansion.xhtml%}
 
   <hr/>
   <p>
-    Explanation of the columns that may appear on this page:
+    上記の表示に出てくる可能性のある列の説明:
   </p>
   <table class="grid">
     <tr>
       <td>Level</td>
-      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
-          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+      <td>FHIRが定義しているいくつかのコードリストは階層構造になっており、各コードにはレベルが割り当てられています。この方式では、いくつかのコードは他のコードの配下にあり、その配下にあるコードも適用されます。</td>
     </tr>
     <tr>
       <td>Source</td>
-      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+      <td>コードの定義ソース(バリューセットが他の場所で定義されたコードである場合)</td>
     </tr>
     <tr>
       <td>Code</td>
-      <td>The code (used as the code in the resource instance)</td>
+      <td>コード(リソースインスタンスのコードとして使用される)</td>
     </tr>
     <tr>
       <td>Display</td>
-      <td>The display (used in the <i>display</i> element of a <a href="{{site.data.fhir.path}}datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+      <td>ディスプレイ（<a href="{{site.data.fhir.path}}datatypes.html#Coding">Coding</a>の<i>display</i>要素で使用されます）。表示がない場合、実装者は単にコードを表示するのではなく、概念をアプリケーションにマッピングする必要があります</td>
     </tr>
     <tr>
       <td>Definition</td>
-      <td>An explanation of the meaning of the concept</td>
+      <td>概念の意味の説明</td>
     </tr>
     <tr>
       <td>Comments</td>
-      <td>Additional notes about how to use the code</td>
+      <td>コードの使用方法に関するその他の注意事項</td>
     </tr>
   </table>
 

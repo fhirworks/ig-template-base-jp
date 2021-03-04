@@ -2,20 +2,20 @@
 ---
 {% include fragment-pagebegin.html %}
 <div class="col-12">
-  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  <!--ReleaseHeader--><p id="publish-box">このページは作成中の内容です。</p><!--EndReleaseHeader-->
   {% include fragment-profile-navtabs.html type='{{[type]}}' id='{{[id]}}' active='content' %}
   <a name="root"> </a>
-  <h2 id="root">Extension: {{site.data.pages[page.path].title}}</h2>
+  <h2 id="root">拡張: {{site.data.pages[page.path].title}}</h2>
   <p>{{site.data.structuredefinitions['{{[id]}}'].description | markdownify}}</p>
   <p>
-  The official URL for this extension is:
+  この拡張の公式URL:
   </p>
   <pre>{{site.data.structuredefinitions['{{[id]}}'].url}}</pre>
-  <p>Status: <b>{{site.data.structuredefinitions['{{[id]}}'].status}}</b><br/>
-    Extension maintained by: {{site.data.structuredefinitions['{{[id]}}'].publisher}}</p>
+  <p>状態: <b>{{site.data.structuredefinitions['{{[id]}}'].status}}</b><br/>
+    継続されている拡張: {{site.data.structuredefinitions['{{[id]}}'].publisher}}</p>
 
-  <p><b>Context of Use</b></p>
-  <p>This extension may be used on the following {{site.data.structuredefinitions['{{[id]}}'].contextType}} element(s):</p>
+  <p><b>使用内容</b></p>
+  <p>この拡張は以下の {{site.data.structuredefinitions['{{[id]}}'].contextType}} 要素で使用されます:</p>
   <ul>
     {% for context in site.data.structuredefinitions['{{[id]}}'].contexts %}
     <li>{{context.type}}</li>
@@ -25,25 +25,25 @@
   <!-- insert intro if present -->
   {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' %}
 
-  <p><b>Usage info</b></p>
+  <p><b>使用情報</b></p>
   {%include StructureDefinition-{{[id]}}-sd-xref.xhtml%}
 
   <!-- no uri -->
   <a name="profile"> </a>
-  <h3 id="profile">Formal Views of Extension Content</h3>
+  <h3 id="profile">拡張内容の形式的な表示</h3>
   <p>
-    <a href="{{site.data.fhir.path}}profiling.html#representation">Description of Profiles, Differentials, Snapshots, and how the XML and JSON presentations work</a>.
+    <a href="{{site.data.fhir.path}}profiling.html#representation">プロファイル、差分、スナップショット、XMLとJSONの表示内容について説明します。</a>.
   </p>
   <div id="tabs">
     <ul>
       <li>
-        <a href="#tabs-summ">Text Summary</a>
+        <a href="#tabs-summ">内容</a>
       </li>
       <li>
-        <a href="#tabs-diff">Differential Table</a>
+        <a href="#tabs-diff">差分</a>
       </li>
       <li>
-        <a href="#tabs-snap">Snapshot Table</a>
+        <a href="#tabs-snap">スナップショット</a>
       </li>
 {% unless excludexml == 'y' %}
       <!--<li>
@@ -61,13 +61,13 @@
       </li>-->
 {% endunless %}
       <li>
-        <a href="#tabs-all">All</a>
+        <a href="#tabs-all">すべて</a>
       </li>
     </ul>
     <a name="tabs-summ"> </a>
     <div id="tabs-summ">
       <div id="tbl-summ">
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="tbl-summ-inner">
           <a name="summary"> </a>
@@ -78,7 +78,7 @@
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="tbl-diff-inner">
           {%include StructureDefinition-{{[id]}}-diff.xhtml%}
@@ -126,7 +126,7 @@
     <a name="tabs-all"> </a>
     <div id="tabs-all">
       <div id="all-summ">
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="all-summ-inner">
           {%include StructureDefinition-{{[id]}}-summary.xhtml%}
@@ -134,9 +134,9 @@
       </div>
       <div id="all-tbl-diff">
         <p>
-          <b>Differential View</b>
+          <b>差分</b>
         </p>
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        <p>この構造は <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}} から派生しています</a>
         </p>
         <div id="all-tbl-diff-inner">
           {%include StructureDefinition-{{[id]}}-diff.xhtml%}
@@ -144,7 +144,7 @@
       </div>
       <div id="all-tbl-snap">
         <p>
-          <b>Snapshot View</b>
+          <b>スナップショット</b>
         </p>
         <div id="all-tbl-snap-inner">
           {%include StructureDefinition-{{[id]}}-snapshot.xhtml%}
@@ -183,7 +183,7 @@
     </div>
   </div>
   <p>&#160;</p>
-  <p>Other representations of extension: <a href="{{[type]}}-{{[id]}}.sch">Schematron</a>
+  <p>拡張の他の表現: <a href="{{[type]}}-{{[id]}}.sch">Schematron</a>
   </p>
   <a name="tx"> </a>
   <!--Terminology Bindings heading in the fragment -->

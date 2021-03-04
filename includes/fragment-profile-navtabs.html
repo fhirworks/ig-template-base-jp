@@ -13,32 +13,32 @@
 <ul class="nav nav-tabs">
 {% if include.active == 'content' %}
   <li class="active">
-    <a href="#">Content</a>
+    <a href="#">内容</a>
   </li>
 {% else %}
   <li>
-    <a href="{{include.type}}-{{include.id}}.html">Content</a>
+    <a href="{{include.type}}-{{include.id}}.html">内容</a>
   </li>
 {% endif %}
 
 {% if include.active == 'definition' %}
   <li class="active">
-    <a href="#">Detailed Descriptions</a>
+    <a href="#">詳細</a>
   </li>
 {% else %}
   <li>
-    <a href="{{include.type}}-{{include.id}}-definitions.html">Detailed Descriptions</a>
+    <a href="{{include.type}}-{{include.id}}-definitions.html">詳細</a>
   </li>
 {% endif %}
 
 {% unless excludemaps == 'y' %}
   {% if include.active == 'mapping' %}
     <li class="active">
-      <a href="#">Mappings</a>
+      <a href="#">マッピング</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}-mappings.html">Mappings</a>
+      <a href="{{include.type}}-{{include.id}}-mappings.html">マッピング</a>
     </li>
   {% endif %}
 {% endunless %}
@@ -52,7 +52,7 @@
       </li>
     {% else %}
       <li>
-        <a href="{{include.type}}-{{include.id}}-examples.html">Examples</a>
+        <a href="{{include.type}}-{{include.id}}-examples.html">サンプル</a>
       </li>
     {% endif %}
   {% endunless %}
@@ -95,11 +95,11 @@
 {% if  site.data.resources[resource_].['history'] %}
   {% if include.active == 'history' %}
     <li class="active">
-      <a href="#">History</a>
+      <a href="#">履歴</a>
     </li>
   {% else %}
     <li>
-      <a href="{{include.type}}-{{include.id}}.profile.history.html">History</a>
+      <a href="{{include.type}}-{{include.id}}.profile.history.html">履歴</a>
     </li>
   {% endif %}
 {% endif %}
