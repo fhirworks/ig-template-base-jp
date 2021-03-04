@@ -32,7 +32,7 @@
       <xsl:apply-templates select="@*"/>
       <xsl:if test="count(html:h3)>1">
         <div class="markdown-toc">
-          <p>Contents:</p>
+          <p>目次:</p>
           <ul>
             <xsl:for-each select="html:h3">
               <li>
