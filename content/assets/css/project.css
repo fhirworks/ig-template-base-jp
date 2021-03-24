@@ -665,3 +665,12 @@ body{
     -o-transition: opacity 0.7s; /* opera */
     -moz-transition: opacity 0.7s; /* firefox */
 }
+
+.container th,
+.container td {
+  border: 1px solid silver;
+}
+
+.container .hierarchy {
+  border: 0px solid;
+}
