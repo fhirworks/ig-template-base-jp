@@ -670,6 +670,6 @@ body{
   border: 1px solid silver;
 }
 
-.hierarchy {
-  border: 0px solid none;
+.container .hierarchy {
+  border: 0px solid;
 }
